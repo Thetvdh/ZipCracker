@@ -39,7 +39,12 @@ check_inputs(file, wordlist, outfile)
 zip_file = zipfile.ZipFile(file)
 num_words = len(list(open(wordlist, "rb")))
 
-os.system("clear")
+
+if sys.platform.startswith('linux'):
+    os.system("clear")
+elif sys.platform.startswith('win'):
+    os.system("cls")
+
 with open(wordlist, "rb") as wordlist:
     for word in tqdm(wordlist, total=num_words, unit="word"):
         try:
