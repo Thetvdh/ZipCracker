@@ -24,7 +24,7 @@ Linux:
 
 # Usage
 
-python3 cracker.py -f <zipfile.zip> -w <wordlist> -O <dir>
+python3 cracker.py -f <zipfile.zip> -w <wordlist.txt> -O <dir>
 
 The zipfile and wordlist must be specified. The output directory defaults to the current working directory.
 
